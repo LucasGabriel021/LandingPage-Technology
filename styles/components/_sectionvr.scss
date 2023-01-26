@@ -1,0 +1,33 @@
+@import "../abstract/variaveis";
+
+#sectionVr {
+     padding: 50px 0;
+     .sectionVr-area {
+          display: flex;
+          justify-content: center;
+          .vr-right {
+               background-color: #fff;
+               padding: 40px;
+               height: 50%;
+               align-self: flex-end;
+               position: relative;
+               right: 150px;
+               h2 {
+                    font-family: $fonte-josefin;
+                    font-weight: 300;
+                    font-size: 40px;
+                    line-height: 45px;
+                    text-transform: uppercase;
+                    color: #000;
+               }
+               p {
+                    margin-top: 10px;
+                    font-family: $fonte-josefin;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $cor-secundaria;
+               }
+          }
+     }
+}
