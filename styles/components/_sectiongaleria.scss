@@ -35,6 +35,14 @@
                gap: 20px;
                .img-galeria {
                     height: 450px;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 30px;
+                    font-family: $fonte-josefin;
+                    font-weight: 300;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    color: #fff;
                }
           }
      }
