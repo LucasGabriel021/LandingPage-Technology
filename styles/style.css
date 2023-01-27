@@ -34,7 +34,6 @@ header .header-area nav {
   align-items: center;
 }
 header .header-area nav .menu-nav ul {
-  margin-top: 10px;
   list-style: none;
   display: flex;
   -moz-column-gap: 20px;
