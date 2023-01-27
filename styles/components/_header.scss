@@ -1,5 +1,40 @@
 @import "../abstract/variaveis";
 
+@mixin menu() {
+     ul {
+          margin-top: 10px;
+          list-style: none;
+          display: flex;
+          column-gap: 20px;
+          li {
+               a {
+                    text-decoration: none;
+                    font-family: $fonte-alata;
+                    font-weight: normal;
+                    color: #fff;
+                    padding-bottom: 10px;
+                    position: relative;
+                    &::after {
+                         content: '';
+                         position: absolute;
+                         margin-top: 10px;
+                         top: 50%;
+                         left: 50%;
+                         transform: translate(-50%, -50%);
+                         height: 2px;
+                         width: 25px;
+                         background-color: #fff;
+                         opacity: 0;
+                         transition: all .4s linear;
+                    }
+                    &:hover::after {
+                         opacity: 1;
+                    }
+               }
+          }
+     }
+}
+
 header {
      background: url(../../images/desktop/image-hero.jpg) center no-repeat;
      background-size: cover;
@@ -16,35 +51,7 @@ header {
                justify-content: space-between;
                align-items: center;
                .menu-nav {
-                    ul {
-                         list-style: none;
-                         display: flex;
-                         column-gap: 20px;
-                         li a {
-                              text-decoration: none;
-                              font-family: $fonte-alata;
-                              font-weight: normal;
-                              color: #fff;
-                              padding-bottom: 10px;
-                              position: relative;
-                              &::after {
-                                   content: '';
-                                   position: absolute;
-                                   margin-top: 10px;
-                                   top: 50%;
-                                   left: 50%;
-                                   transform: translate(-50%, -50%);
-                                   height: 2px;
-                                   width: 25px;
-                                   background-color: #fff;
-                                   opacity: 0;
-                                   transition: all .4s linear;
-                              }
-                              &:hover::after {
-                                   opacity: 1;
-                              }
-                         }
-                    }
+                    @include menu();
                }
           }
           .banner-text {
